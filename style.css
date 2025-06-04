@@ -24,7 +24,7 @@ body{
 .container{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 6%;
+    padding: 0 4%;
 }
 
 
@@ -52,7 +52,7 @@ form p{
 
 .input-single{
     position: relative;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 
@@ -60,9 +60,8 @@ form p{
     position: absolute;
     left: 0;
     bottom: 5px;
+    transition: all 0.2s;
     cursor: text;
-    transition: all 0.5s;
-    color: #808080;
 }
 
 
@@ -72,4 +71,29 @@ form p{
     border-bottom: 2px solid #ccc;
     padding: 5px;
     font-size: 16px;
+    outline: 0;
+}
+
+
+form .input-single .input:focus ~ label,
+form .input-single .input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #2D5966;
+}
+
+
+.btn{
+    width: 100%;
+    text-align: center;
+}
+
+
+form input[type=submit]{
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #2D5966;
+    color: #fff;
+    cursor: pointer;
 }
